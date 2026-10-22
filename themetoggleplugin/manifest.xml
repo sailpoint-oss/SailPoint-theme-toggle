@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE Plugin PUBLIC "sailpoint.dtd" "sailpoint.dtd">
+<Plugin certificationLevel="None" displayName="Theme Toggle" minSystemVersion="7.2" name="ThemeToggle" version="1.0.0">
+  <Attributes>
+    <Map>
+      <entry key="snippets">
+        <value>
+          <List>
+            <Snippet regexPattern=".*">
+              <Scripts>
+                <String>ui/js/headerInject.js</String>
+              </Scripts>
+              <StyleSheets>
+                <String>ui/css/plugin.css</String>
+                <String>ui/css/theme-dark.css</String>
+              </StyleSheets>
+            </Snippet>
+          </List>
+        </value>
+      </entry>
+    </Map>
+  </Attributes>
+</Plugin>

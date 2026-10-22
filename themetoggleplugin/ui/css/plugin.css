@@ -1,0 +1,150 @@
+/* Hide "Skip to Content" – keep accessible for keyboard users */
+#skipNavigationBtn,
+.navSkipNavigationBtnStyle,
+a[href="#mainContent"],
+a[href="#content"] {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+#skipNavigationBtn:focus,
+.navSkipNavigationBtnStyle:focus,
+a[href="#mainContent"]:focus,
+a[href="#content"]:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  margin: 6px !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  background: #111625 !important;
+  color: #fff !important;
+  padding: 6px 10px !important;
+  border-radius: 6px !important;
+  z-index: 10000;
+}
+
+/* Theme Toggle – modern sliding switch in SP top navbar */
+.themetoggleplugin-toggle-btn,
+#themetoggleplugin-toggle-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 4px !important;
+  margin: 8px 6px !important;
+  cursor: pointer;
+  text-decoration: none !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.themetoggleplugin-toggle-btn:focus,
+#themetoggleplugin-toggle-btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.themetoggle-track {
+  position: relative;
+  width: 48px;
+  height: 26px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  box-sizing: border-box;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+
+.themetoggle-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #f8fafc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.35), 0 0 0 1px rgba(0,0,0,0.06);
+  transform: translateX(0);
+  transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.themetoggle-thumb i {
+  font-size: 11px !important;
+  line-height: 1 !important;
+  transition: color 0.25s ease;
+}
+
+/* Light mode – show moon on thumb */
+body:not(.iiq-theme-dark) .themetoggle-thumb i {
+  color: #475569 !important;
+}
+body:not(.iiq-theme-dark) .themetoggle-track {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* Dark mode – thumb slides right, warm sun */
+body.iiq-theme-dark .themetoggle-thumb {
+  transform: translateX(22px);
+  background: #fbbf24;
+  box-shadow: 0 2px 8px rgba(251, 191, 36, 0.45), 0 0 0 1px rgba(251, 191, 36, 0.25);
+}
+body.iiq-theme-dark .themetoggle-thumb i {
+  color: #7c2d12 !important;
+}
+body.iiq-theme-dark .themetoggle-track {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.28);
+}
+
+/* Hover – subtle lift */
+.themetoggleplugin-toggle-btn:hover .themetoggle-track,
+#themetoggleplugin-toggle-btn:hover .themetoggle-track {
+  border-color: rgba(255,255,255,0.34);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.22);
+}
+body.iiq-theme-dark .themetoggleplugin-toggle-btn:hover .themetoggle-track {
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 2px 12px rgba(56,189,248,0.22);
+}
+
+.themetoggleplugin-toggle-btn:focus-visible .themetoggle-track,
+#themetoggleplugin-toggle-btn:focus-visible .themetoggle-track {
+  box-shadow: 0 0 0 3px rgba(56,189,248,0.35);
+}
+
+/* Injected nav item – vertically centered */
+ul.navbar-right li.themetoggleplugin-nav-item {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* Fallback floating button when top navbar is absent */
+.themetoggleplugin-fixed-wrap {
+  position: fixed;
+  top: 12px;
+  right: 280px;
+  z-index: 9999;
+}
+.themetoggleplugin-fixed-wrap li {
+  list-style: none;
+  display: inline-block;
+}
+.themetoggleplugin-fixed-wrap .themetoggle-track {
+  background: rgba(17,22,37,0.92);
+  border-color: rgba(255,255,255,0.18);
+}
+

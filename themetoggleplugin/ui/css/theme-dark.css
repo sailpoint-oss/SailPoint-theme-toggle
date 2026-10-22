@@ -1,0 +1,2542 @@
+/*
+ * SailPoint IdentityIQ Theme Toggle Plugin – Dark Slate Theme System
+ * High-contrast, brand-preserving, modern dark theme for SailPoint IIQ 7.2+
+ */
+
+html.iiq-theme-dark {
+  color-scheme: dark;
+}
+
+body.iiq-theme-dark {
+  --iiq-dk-bg: #0b0f17;                /* Main canvas background */
+  --iiq-dk-nav-bg: #111625;            /* SailPoint Brand Navbar - Deep Midnight Navy */
+  --iiq-dk-nav-border: #1e2638;        /* Navbar bottom border */
+  --iiq-dk-surface: #151b26;           /* Card & container background */
+  --iiq-dk-surface-elevated: #1c2333;  /* Modals, popovers, table rows */
+  --iiq-dk-surface-header: #21283b;    /* Card headers & table headers */
+  --iiq-dk-border: #293249;            /* Element borders */
+  --iiq-dk-border-subtle: #1f273a;     /* Dividers */
+  --iiq-dk-text: #f1f5f9;              /* Primary text - crisp white-slate */
+  --iiq-dk-text-secondary: #cbd5e1;    /* Subheadings */
+  --iiq-dk-text-muted: #94a3b8;        /* Muted labels & timestamps */
+  --iiq-dk-accent: #38bdf8;            /* Vibrant cyan/blue links & highlights */
+  --iiq-dk-accent-hover: #60a5fa;      /* Accent hover */
+  --iiq-dk-accent-glow: rgba(56, 189, 248, 0.18);
+  --iiq-dk-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+
+  background-color: var(--iiq-dk-bg) !important;
+  color: var(--iiq-dk-text) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Base structural layout override */
+body.iiq-theme-dark #spBodyPanelDiv,
+body.iiq-theme-dark .sp-body-container,
+body.iiq-theme-dark .sp-body,
+body.iiq-theme-dark .classic-body-container,
+body.iiq-theme-dark .bodyDiv,
+body.iiq-theme-dark #bodyContentTd,
+body.iiq-theme-dark #bodyDivContent {
+  background-color: var(--iiq-dk-bg) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* ==========================================================================
+   1. TOP NAVIGATION & HEADER (SailPoint Brand Indigo / Midnight Navy)
+   ========================================================================== */
+body.iiq-theme-dark header.topbar,
+body.iiq-theme-dark header.bg-info.dker,
+body.iiq-theme-dark nav.header,
+body.iiq-theme-dark nav.navbar,
+body.iiq-theme-dark nav.bg-primary.navbar,
+body.iiq-theme-dark .navbar.bg-primary,
+body.iiq-theme-dark #spHeaderPanelDiv,
+body.iiq-theme-dark #menuMainDiv {
+  background-color: var(--iiq-dk-nav-bg) !important;
+  border-bottom: 1px solid var(--iiq-dk-nav-border) !important;
+}
+
+body.iiq-theme-dark .nav.navbar-nav > li > a,
+body.iiq-theme-dark #menuMainDiv a,
+body.iiq-theme-dark header.topbar a,
+body.iiq-theme-dark .dropdown-toggle,
+body.iiq-theme-dark #usernameMenu,
+body.iiq-theme-dark #userMenu {
+  color: #f8fafc !important;
+}
+
+body.iiq-theme-dark .nav.navbar-nav > li > a:hover,
+body.iiq-theme-dark .nav.navbar-nav > li > a:focus,
+body.iiq-theme-dark #menuMainDiv a:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--iiq-dk-accent) !important;
+  border-radius: 4px;
+}
+
+/* Sub-header / Breadcrumbs Title bar */
+body.iiq-theme-dark #bodyDivTitle,
+body.iiq-theme-dark .bodyHeaderDiv,
+body.iiq-theme-dark .titleText {
+  background-color: var(--iiq-dk-bg) !important;
+  color: var(--iiq-dk-text) !important;
+  border-bottom: 1px solid var(--iiq-dk-border);
+}
+
+body.iiq-theme-dark #breadCrumbs,
+body.iiq-theme-dark #breadCrumbs a {
+  color: var(--iiq-dk-text-muted) !important;
+}
+body.iiq-theme-dark #breadCrumbs a:hover {
+  color: var(--iiq-dk-accent) !important;
+}
+
+/* ==========================================================================
+   2. DASHBOARD WIDGETS & CARDS (home.xhtml, panels, quicklinks)
+   ========================================================================== */
+body.iiq-theme-dark .panel,
+body.iiq-theme-dark .card,
+body.iiq-theme-dark .quickLinkCardContainer .panel,
+body.iiq-theme-dark .quicklink-card .panel,
+body.iiq-theme-dark .home-widgets .panel,
+body.iiq-theme-dark .bg-white,
+body.iiq-theme-dark .panel.bg-white,
+body.iiq-theme-dark .panel-body.bg-white {
+  background-color: var(--iiq-dk-surface) !important;
+  border: 1px solid var(--iiq-dk-border) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--iiq-dk-shadow) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.iiq-theme-dark .panel:hover,
+body.iiq-theme-dark .quicklink-card .panel:hover {
+  border-color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .panel-heading,
+body.iiq-theme-dark .card-header,
+body.iiq-theme-dark .panel-default > .panel-heading,
+body.iiq-theme-dark .home-widgets .panel-heading {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-bottom: 1px solid var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+  font-weight: 600 !important;
+  border-top-left-radius: 7px !important;
+  border-top-right-radius: 7px !important;
+  padding: 12px 16px;
+}
+
+body.iiq-theme-dark .panel-body,
+body.iiq-theme-dark .card-body,
+body.iiq-theme-dark .home-widgets .panel-body {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+  padding: 16px;
+}
+
+/* Action Quicklink Metric Numbers (e.g. Policy Violations "0", Access Reviews "0") */
+body.iiq-theme-dark .card-number,
+body.iiq-theme-dark .quicklink-card .card-number,
+body.iiq-theme-dark .quickLinkCardContainer .card-number,
+body.iiq-theme-dark .panel-body .h1,
+body.iiq-theme-dark .panel-body .h2 {
+  color: #ffffff !important;
+  font-size: 2.2rem !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Card titles and interactive headings */
+body.iiq-theme-dark .card-title,
+body.iiq-theme-dark .quicklink-card .card-title,
+body.iiq-theme-dark .quickLinkCardContainer a,
+body.iiq-theme-dark .panel-title,
+body.iiq-theme-dark .panel-title a {
+  color: var(--iiq-dk-accent) !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+body.iiq-theme-dark .card-title:hover,
+body.iiq-theme-dark .quicklink-card .card-title:hover,
+body.iiq-theme-dark .panel-title a:hover {
+  color: var(--iiq-dk-accent-hover) !important;
+}
+
+body.iiq-theme-dark .card-arrow-icon {
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+/* Footer of cards & pagination */
+body.iiq-theme-dark .panel-footer,
+body.iiq-theme-dark .card-footer {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-top: 1px solid var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+/* ==========================================================================
+   3. DROPDOWNS & NAVIGATION MENUS
+   ========================================================================== */
+body.iiq-theme-dark .dropdown-menu,
+body.iiq-theme-dark .navbar-nav .open .dropdown-menu,
+body.iiq-theme-dark .sp-dropdown-group > ul {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border: 1px solid var(--iiq-dk-border) !important;
+  border-radius: 6px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+  padding: 6px 0;
+}
+
+body.iiq-theme-dark .dropdown-menu > li > a,
+body.iiq-theme-dark .sp-dropdown-group > ul > li > a {
+  color: var(--iiq-dk-text) !important;
+  padding: 8px 16px;
+}
+
+body.iiq-theme-dark .dropdown-menu > li > a:hover,
+body.iiq-theme-dark .dropdown-menu > li > a:focus,
+body.iiq-theme-dark .sp-dropdown-group > ul > li > a:hover {
+  background-color: var(--iiq-dk-accent) !important;
+  color: #ffffff !important;
+}
+
+body.iiq-theme-dark .dropdown-menu .divider {
+  background-color: var(--iiq-dk-border) !important;
+  margin: 6px 0;
+}
+
+/* ==========================================================================
+   4. FORM CONTROLS & INPUTS
+   ========================================================================== */
+body.iiq-theme-dark .form-control,
+body.iiq-theme-dark input[type="text"],
+body.iiq-theme-dark input[type="password"],
+body.iiq-theme-dark input[type="search"],
+body.iiq-theme-dark select,
+body.iiq-theme-dark textarea {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border: 1px solid var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+  border-radius: 4px;
+}
+
+body.iiq-theme-dark .form-control:focus,
+body.iiq-theme-dark input:focus,
+body.iiq-theme-dark select:focus,
+body.iiq-theme-dark textarea:focus {
+  border-color: var(--iiq-dk-accent) !important;
+  box-shadow: 0 0 0 3px var(--iiq-dk-accent-glow) !important;
+  outline: none;
+}
+
+body.iiq-theme-dark label,
+body.iiq-theme-dark .control-label {
+  color: var(--iiq-dk-text) !important;
+  font-weight: 500;
+}
+
+body.iiq-theme-dark .input-group-addon,
+body.iiq-theme-dark .input-group-btn .btn {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* ==========================================================================
+   5. BUTTONS & ACTIONS
+   ========================================================================== */
+body.iiq-theme-dark .btn-default,
+body.iiq-theme-dark .btn-white,
+body.iiq-theme-dark .btn-secondary {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border: 1px solid var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.15s ease;
+}
+
+body.iiq-theme-dark .btn-default:hover,
+body.iiq-theme-dark .btn-white:hover,
+body.iiq-theme-dark .btn-secondary:hover {
+  background-color: var(--iiq-dk-border) !important;
+  color: #ffffff !important;
+  border-color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .btn-primary,
+body.iiq-theme-dark .btn-info {
+  background-color: #0284c7 !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+body.iiq-theme-dark .btn-primary:hover,
+body.iiq-theme-dark .btn-info:hover {
+  background-color: #0369a1 !important;
+  border-color: #0284c7 !important;
+}
+
+/* ==========================================================================
+   6. TABLES, DATA GRIDS & EXTJS GRID OVERRIDES (Identity Warehouse, Work Items, Applications)
+   ========================================================================== */
+body.iiq-theme-dark .x-grid3,
+body.iiq-theme-dark .x-grid3-body,
+body.iiq-theme-dark .x-grid3-viewport,
+body.iiq-theme-dark .x-grid3-scroller,
+body.iiq-theme-dark .x-grid3-row,
+body.iiq-theme-dark .x-grid3-row-alt,
+body.iiq-theme-dark table.x-grid3-row-table,
+body.iiq-theme-dark .x-grid3-row-table td,
+body.iiq-theme-dark .x-grid3-col,
+body.iiq-theme-dark .x-grid3-cell,
+body.iiq-theme-dark .x-grid3-cell-inner,
+body.iiq-theme-dark .x-grid3-col-inner,
+body.iiq-theme-dark .x-grid-body,
+body.iiq-theme-dark .x-grid-row,
+body.iiq-theme-dark .x-grid-cell,
+body.iiq-theme-dark .x-grid-cell-inner,
+body.iiq-theme-dark .x-panel-body,
+body.iiq-theme-dark .x-panel-bbar,
+body.iiq-theme-dark .x-panel-tbar,
+body.iiq-theme-dark .x-panel-fbar,
+body.iiq-theme-dark .x-panel-noborder,
+body.iiq-theme-dark .x-panel-body-noborder,
+body.iiq-theme-dark .x-panel-body-noheader,
+body.iiq-theme-dark .x-window-body,
+body.iiq-theme-dark .spTableDiv,
+body.iiq-theme-dark .grid-panel,
+body.iiq-theme-dark #identities-grid,
+body.iiq-theme-dark div[id*="grid"],
+body.iiq-theme-dark div[id*="Grid"] {
+  background-color: var(--iiq-dk-surface) !important;
+  background-image: none !important;
+  color: var(--iiq-dk-text) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* Alternating Grid Rows & Table Rows */
+body.iiq-theme-dark .x-grid3-row-alt,
+body.iiq-theme-dark .x-grid-row-alt,
+body.iiq-theme-dark table.x-grid3-row-table tr:nth-child(even),
+body.iiq-theme-dark .x-grid3-row-alt table.x-grid3-row-table {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+/* Hover & Selected States */
+body.iiq-theme-dark .x-grid3-row-over,
+body.iiq-theme-dark .x-grid3-row:hover,
+body.iiq-theme-dark .x-grid-row-over,
+body.iiq-theme-dark .x-grid-row:hover,
+body.iiq-theme-dark .x-grid3-row-over table.x-grid3-row-table {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+}
+
+body.iiq-theme-dark .x-grid3-row-selected,
+body.iiq-theme-dark .x-grid-row-selected,
+body.iiq-theme-dark .x-grid3-row-selected table.x-grid3-row-table {
+  background-color: rgba(56, 189, 248, 0.22) !important;
+}
+
+/* Grid Headers */
+body.iiq-theme-dark .x-grid3-header,
+body.iiq-theme-dark .x-grid3-header-inner,
+body.iiq-theme-dark .x-grid3-hd-inner,
+body.iiq-theme-dark .x-grid3-header-offset,
+body.iiq-theme-dark td.x-grid3-header-cell,
+body.iiq-theme-dark .x-grid-header-ct,
+body.iiq-theme-dark .x-column-header,
+body.iiq-theme-dark .x-column-header-inner,
+body.iiq-theme-dark th.x-grid3-header-cell {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  color: var(--iiq-dk-text) !important;
+  border-color: var(--iiq-dk-border) !important;
+  font-weight: 600 !important;
+}
+
+body.iiq-theme-dark .x-grid3-hd-inner a,
+body.iiq-theme-dark .x-column-header-text,
+body.iiq-theme-dark .x-grid3-header-cell div,
+body.iiq-theme-dark .x-grid3-header-cell span {
+  color: var(--iiq-dk-text) !important;
+  font-weight: 600 !important;
+}
+
+/* Text and Link Contrast inside ExtJS Cells */
+body.iiq-theme-dark .x-grid3-cell-inner,
+body.iiq-theme-dark .x-grid-cell-inner,
+body.iiq-theme-dark td.x-grid3-col,
+body.iiq-theme-dark td.x-grid3-cell,
+body.iiq-theme-dark .x-grid3-row td {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-grid3-cell-inner a,
+body.iiq-theme-dark .x-grid-cell-inner a,
+body.iiq-theme-dark td.x-grid3-col a,
+body.iiq-theme-dark .x-grid3-row td a {
+  color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .x-grid3-cell-inner a:hover,
+body.iiq-theme-dark td.x-grid3-col a:hover {
+  color: var(--iiq-dk-accent-hover) !important;
+  text-decoration: underline !important;
+}
+
+/* ExtJS Paging Toolbar & Controls at bottom of Grids */
+body.iiq-theme-dark .x-toolbar,
+body.iiq-theme-dark .x-small-editor,
+body.iiq-theme-dark .x-toolbar-layout-ct,
+body.iiq-theme-dark .x-toolbar-cell,
+body.iiq-theme-dark .x-paging-info,
+body.iiq-theme-dark div.x-toolbar,
+body.iiq-theme-dark td.x-toolbar-cell {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text-secondary) !important;
+}
+
+body.iiq-theme-dark .x-paging-info,
+body.iiq-theme-dark .x-toolbar div,
+body.iiq-theme-dark .x-toolbar td,
+body.iiq-theme-dark .x-toolbar span,
+body.iiq-theme-dark .x-toolbar label {
+  color: var(--iiq-dk-text-secondary) !important;
+}
+
+body.iiq-theme-dark input.x-page-number,
+body.iiq-theme-dark .x-tbar-page-number input,
+body.iiq-theme-dark input.x-form-text,
+body.iiq-theme-dark select.x-form-field {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: var(--iiq-dk-text) !important;
+  border: 1px solid var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .x-btn-text,
+body.iiq-theme-dark button.x-btn-text,
+body.iiq-theme-dark .x-btn button {
+  color: var(--iiq-dk-text) !important;
+}
+
+/* Standalone SailPoint Tables */
+body.iiq-theme-dark table.spTable,
+body.iiq-theme-dark table.spStripedTable,
+body.iiq-theme-dark .spTabledContent,
+body.iiq-theme-dark .spLightTable {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark table.spTable th,
+body.iiq-theme-dark table.spStripedTable th,
+body.iiq-theme-dark .spTabledContent thHeader {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+  border-bottom: 2px solid var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark table.spTable td,
+body.iiq-theme-dark table.spStripedTable td {
+  border-bottom: 1px solid var(--iiq-dk-border-subtle) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* ==========================================================================
+   7. EXTJS COMPONENT OVERRIDES (Object Browser, Workflows, Dialogs)
+   ========================================================================== */
+body.iiq-theme-dark .x-panel,
+body.iiq-theme-dark .x-panel-body,
+body.iiq-theme-dark .x-panel-body-default,
+body.iiq-theme-dark .x-window-body {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-panel-header,
+body.iiq-theme-dark .x-window-header {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-grid-header-ct,
+body.iiq-theme-dark .x-column-header {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-color: var(--iiq-dk-border) !important;
+  background-image: none !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-tab-default-top {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+  background-image: none !important;
+}
+
+body.iiq-theme-dark .x-tab-default-top-active {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-bottom-color: var(--iiq-dk-accent) !important;
+  background-image: none !important;
+}
+
+/* ==========================================================================
+   8. FOOTER & MISC COMPONENTS
+   ========================================================================== */
+body.iiq-theme-dark .sp-footer,
+body.iiq-theme-dark #bodyDivFooter,
+body.iiq-theme-dark #spFooterPanelDiv {
+  background-color: var(--iiq-dk-nav-bg) !important;
+  border-top: 1px solid var(--iiq-dk-nav-border) !important;
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+body.iiq-theme-dark .text-muted,
+body.iiq-theme-dark .help-block {
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+body.iiq-theme-dark a {
+  color: var(--iiq-dk-accent);
+}
+body.iiq-theme-dark a:hover {
+  color: var(--iiq-dk-accent-hover);
+}
+
+
+/* ==========================================================================
+   9. GLOBAL STRUCTURAL OVERRIDES (LEGACY JSF & EXTJS)
+   ========================================================================== */
+/* Main Body & Layout Wrappers */
+body.iiq-theme-dark,
+body.iiq-theme-dark .bodyDiv,
+body.iiq-theme-dark #bodyDiv,
+body.iiq-theme-dark #bodyTitleTd,
+body.iiq-theme-dark #bodyContentTd,
+body.iiq-theme-dark #bodyBottomTd,
+body.iiq-theme-dark .sp-page-content,
+body.iiq-theme-dark .main-content,
+body.iiq-theme-dark #content,
+body.iiq-theme-dark .container-fluid,
+body.iiq-theme-dark .wrapper-md,
+body.iiq-theme-dark .wrapper,
+body.iiq-theme-dark .sp-ui-app,
+body.iiq-theme-dark .spAjaxContent,
+body.iiq-theme-dark #spAjaxContent,
+body.iiq-theme-dark .x-panel-body-noheader,
+body.iiq-theme-dark .x-panel-bwrap,
+body.iiq-theme-dark .x-border-layout-ct,
+body.iiq-theme-dark .x-layout-collapsed {
+  background-color: var(--iiq-dk-bg) !important;
+  background-image: none !important;
+}
+
+/* Content Boxes, Windows, and Nested Panels */
+body.iiq-theme-dark .spContent,
+body.iiq-theme-dark .spTitledContent,
+body.iiq-theme-dark .spTabledContent,
+body.iiq-theme-dark .spLightBlueTabledContent,
+body.iiq-theme-dark .spBlueTabledContent,
+body.iiq-theme-dark .spTabledAjaxContent,
+body.iiq-theme-dark .spGridContent,
+body.iiq-theme-dark .spBackground,
+body.iiq-theme-dark .submenuContentBox,
+body.iiq-theme-dark .applicationTabPanelBody,
+body.iiq-theme-dark .baseWindow,
+body.iiq-theme-dark .baseWindowBody,
+body.iiq-theme-dark .x-panel-body,
+body.iiq-theme-dark .x-panel-header,
+body.iiq-theme-dark .x-window-body,
+body.iiq-theme-dark .x-window-mc,
+body.iiq-theme-dark .x-grid-panel,
+body.iiq-theme-dark .x-grid3,
+body.iiq-theme-dark .detailsPanel,
+body.iiq-theme-dark .detailsPanelContent {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+  background-image: none !important;
+}
+
+/* Base Utility Classes used for hardcoded white */
+body.iiq-theme-dark .spWhite,
+body.iiq-theme-dark .borderCell,
+body.iiq-theme-dark .bg-white,
+body.iiq-theme-dark .white-bg,
+body.iiq-theme-dark .bg-light,
+body.iiq-theme-dark .light-bg {
+  background-color: var(--iiq-dk-surface) !important;
+  background-image: none !important;
+}
+
+/* Forms and Messages */
+body.iiq-theme-dark .form,
+body.iiq-theme-dark form {
+  background-color: transparent !important;
+}
+
+/* JSF form messages – tinted translucent banners so the green/orange/red stays vibrant and readable on dark */
+body.iiq-theme-dark .formInfo {
+  background-color: rgba(34, 197, 94, 0.14) !important;
+  border: 1px solid rgba(34, 197, 94, 0.35) !important;
+  color: #4ade80 !important;
+}
+body.iiq-theme-dark .formInfo a { color: #4ade80 !important; text-decoration: underline; }
+body.iiq-theme-dark .formWarn {
+  background-color: rgba(245, 158, 11, 0.14) !important;
+  border: 1px solid rgba(245, 158, 11, 0.35) !important;
+  color: #fbbf24 !important;
+}
+body.iiq-theme-dark .formWarn a { color: #fbbf24 !important; }
+body.iiq-theme-dark .formError,
+body.iiq-theme-dark .formErrorNoPad,
+body.iiq-theme-dark .formErrorNoWrap {
+  background-color: rgba(239, 68, 68, 0.14) !important;
+  border: 1px solid rgba(239, 68, 68, 0.35) !important;
+  color: #f87171 !important;
+}
+body.iiq-theme-dark .spFormErrorPanel {
+  background-color: rgba(239, 68, 68, 0.10) !important;
+  border-top: 2px solid rgba(239, 68, 68, 0.45) !important;
+  border-bottom: 2px solid rgba(239, 68, 68, 0.45) !important;
+  color: #fca5a5 !important;
+}
+body.iiq-theme-dark .spFormErrorPanel h2 { color: #f87171 !important; }
+
+/* ==========================================================================
+   10. TABLES, GRIDS, & ROW STRIPING
+   ========================================================================== */
+body.iiq-theme-dark table.spStripedTable tr td,
+body.iiq-theme-dark tr.even, 
+body.iiq-theme-dark td.even, 
+body.iiq-theme-dark table.spStripedTable tr:nth-child(even) td {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border-subtle) !important;
+}
+
+body.iiq-theme-dark tr.odd, 
+body.iiq-theme-dark td.odd, 
+body.iiq-theme-dark table.spStripedTable tr:nth-child(odd) td {
+  background-color: var(--iiq-dk-bg) !important;
+  border-color: var(--iiq-dk-border-subtle) !important;
+}
+
+body.iiq-theme-dark table[border="0"],
+body.iiq-theme-dark table,
+body.iiq-theme-dark td,
+body.iiq-theme-dark th {
+  border-color: var(--iiq-dk-border-subtle) !important;
+}
+
+body.iiq-theme-dark table.x-grid3-row-table td,
+body.iiq-theme-dark .x-grid3-row,
+body.iiq-theme-dark .x-grid3-row-alt {
+  background-color: transparent !important; /* Inherit from grid panel */
+}
+
+/* Specific Identity Details / App Details table cells */
+body.iiq-theme-dark td.wide,
+body.iiq-theme-dark th.attributeTitleColumn,
+body.iiq-theme-dark td.attributeTitleColumn {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark td.wide input,
+body.iiq-theme-dark td.wide textarea,
+body.iiq-theme-dark td.wide span,
+body.iiq-theme-dark td.wide div {
+  background-color: transparent !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* ==========================================================================
+   11. EXTJS TABS
+   ========================================================================== */
+body.iiq-theme-dark .x-tab-panel,
+body.iiq-theme-dark .x-tab-panel-bbar,
+body.iiq-theme-dark .x-tab-panel-tbar,
+body.iiq-theme-dark .x-tab-panel-footer {
+  background-color: var(--iiq-dk-bg) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark ul.x-tab-strip-top {
+  background-color: var(--iiq-dk-nav-bg) !important;
+  border-bottom-color: var(--iiq-dk-border) !important;
+  background-image: none !important;
+}
+
+body.iiq-theme-dark .x-tab-strip span.x-tab-strip-text {
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+body.iiq-theme-dark .x-tab-strip-active span.x-tab-strip-text {
+  color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .x-tab-strip-active,
+body.iiq-theme-dark .x-tab-strip-active .x-tab-right,
+body.iiq-theme-dark .x-tab-strip-active .x-tab-left,
+body.iiq-theme-dark .x-tab-strip-active .x-tab-strip-inner,
+body.iiq-theme-dark .x-tab-right,
+body.iiq-theme-dark .x-tab-left,
+body.iiq-theme-dark .x-tab-strip-inner {
+  background-image: none !important;
+  background-color: transparent !important;
+}
+
+/* ==========================================================================
+   12. ANGULARJS DASHBOARD COMPONENTS
+   ========================================================================== */
+body.iiq-theme-dark .panel,
+body.iiq-theme-dark .panel-body,
+body.iiq-theme-dark .home-widgets,
+body.iiq-theme-dark .quickLinkCardContainer,
+body.iiq-theme-dark .sp-empty-state,
+body.iiq-theme-dark .empty-state,
+body.iiq-theme-dark .empty-panel,
+body.iiq-theme-dark .sp-card,
+body.iiq-theme-dark .card-white,
+body.iiq-theme-dark .list-group-item {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* Target extreme inner divs setting inline backgrounds on dashboard */
+body.iiq-theme-dark .home-widgets div[style*="background"],
+body.iiq-theme-dark .quickLinkCardContainer div[style*="background"] {
+  background-color: transparent !important;
+}
+
+/* ==========================================================================
+   13. PAGE-LEVEL CONTAINERS (from base.css)
+   Targets: #appTable, gradient headers, detail panels, legends, tooltips
+   ========================================================================== */
+body.iiq-theme-dark #appTable {
+  background-color: var(--iiq-dk-bg) !important;
+}
+
+body.iiq-theme-dark .detailsPanelTitleBar,
+body.iiq-theme-dark .expandPanelHeader,
+body.iiq-theme-dark .dashContentHeader,
+body.iiq-theme-dark .spTable caption,
+body.iiq-theme-dark .baseWindowHeader {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  color: var(--iiq-dk-text) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .spTable th,
+body.iiq-theme-dark .spDataTableHeader,
+body.iiq-theme-dark .spBlueTable .spTable th {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  color: var(--iiq-dk-text) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .spTableFooter,
+body.iiq-theme-dark .spDataTableFooter,
+body.iiq-theme-dark .spBlueTableFooter,
+body.iiq-theme-dark .baseWindowFooter {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .spLightGray,
+body.iiq-theme-dark .spSolidLightGray {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: var(--iiq-dk-text-secondary) !important;
+}
+
+body.iiq-theme-dark .expandPanelBody {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .waitingForDataDiv,
+body.iiq-theme-dark .dialogWaitingForDataDiv {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .gridLegend {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  /* Kill the white->gray gradient image from base.css:1094 – it paints OVER background-color */
+  background-image: none !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .floatie,
+body.iiq-theme-dark .fittedFloatie {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .IIQ_decisionChoices {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .spContentTitle,
+body.iiq-theme-dark .spContentTitle2 {
+  color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .sectionHeader,
+body.iiq-theme-dark .subSectionHeader {
+  color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .pageInfo,
+body.iiq-theme-dark .roundedPageInfo {
+  color: var(--iiq-dk-text-secondary) !important;
+}
+
+/* ==========================================================================
+   14. ANGULAR / BOOTSTRAP PAGES (from theme.css)
+   Targets: tabs, wells, modals, popovers, pagination, data-tables, tooltips
+   ========================================================================== */
+body.iiq-theme-dark .tabbable .tab-pane,
+body.iiq-theme-dark .tab-content,
+body.iiq-theme-dark .tab-content-bg {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .well {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .modal-content {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .modal-footer {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-top-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .popover {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .popover-title {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-bottom-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .breadcrumb {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+body.iiq-theme-dark .pagination > li > a,
+body.iiq-theme-dark .pagination > li > span,
+body.iiq-theme-dark .pager li > a,
+body.iiq-theme-dark .pager li > span {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .pagination > li > a:hover,
+body.iiq-theme-dark .pager li > a:hover {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .jumbotron {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .thumbnail,
+body.iiq-theme-dark .img-thumbnail {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark pre,
+body.iiq-theme-dark code {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .progress {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .table td,
+body.iiq-theme-dark .table th {
+  border-color: var(--iiq-dk-border-subtle) !important;
+}
+
+body.iiq-theme-dark .table .table {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .table-hover > tbody > tr:hover {
+  background-color: rgba(56, 189, 248, 0.08) !important;
+}
+
+body.iiq-theme-dark .nav-tabs > li.active > a,
+body.iiq-theme-dark .nav-tabs > li.active > a:hover,
+body.iiq-theme-dark .nav-tabs > li.active > a:focus {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+  border-bottom-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .nav > li > a:hover,
+body.iiq-theme-dark .nav > li > a:focus {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .navbar-default {
+  background-color: var(--iiq-dk-nav-bg) !important;
+  border-color: var(--iiq-dk-nav-border) !important;
+}
+
+body.iiq-theme-dark .select2-container .select2-choice,
+body.iiq-theme-dark .select2-search input {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .tag-editor {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark div.loadingSpinnerMessageDiv {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .overlay .message {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .data-table-loading-mask {
+  background-color: rgba(11, 15, 23, 0.7) !important;
+}
+
+/* Data Tables (SailPoint Angular data-table component) */
+body.iiq-theme-dark .data-table .panel-footer {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.normal-row:nth-of-type(odd),
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.normal-row:nth-of-type(odd) > td.normal-col {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.expanded-row,
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.expanded-row > td.expanded-col {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.section-header-row,
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.section-header-row > td.section-header-col {
+  background-color: var(--iiq-dk-surface-header) !important;
+}
+
+body.iiq-theme-dark .data-table table.table > thead > tr > th.col-sortable:hover {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .data-table-container .no-results-panel {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* ==========================================================================
+   15. CERTIFICATION PAGES
+   ========================================================================== */
+body.iiq-theme-dark .certification .entity-list-panel,
+body.iiq-theme-dark .certification .entity-list-panel .cert-id-list .table,
+body.iiq-theme-dark .certification .entity-list-panel .id-menu {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .certification .tab-content-bg {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .certification-signatures .panel-heading {
+  background-color: var(--iiq-dk-surface-header) !important;
+}
+
+body.iiq-theme-dark .curr-pw-panel-bg {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .decision-page .decision-page-tabs > li > button {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .decision-page .decision-page-tabs > li.active > button {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-accent) !important;
+}
+
+/* ==========================================================================
+   16. WIZARD & WORKFLOW PAGES
+   ========================================================================== */
+body.iiq-theme-dark .wizard {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-bottom-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .wizard ul li.active {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .wizard ul li.active:after {
+  border-left-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .wizard ul li.complete,
+body.iiq-theme-dark .wizard ul li.complete:hover {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .wizard ul li.complete:after {
+  border-left-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .step-content {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* Tabflow (used in provisioning and setup wizards) */
+body.iiq-theme-dark div.tabflow .tabflow-body aside.tabflow-tabs li button:hover,
+body.iiq-theme-dark div.tabflow .tabflow-body aside.tabflow-tabs li button:focus {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+/* ==========================================================================
+   17. MATERIAL COMPONENTS (Angular Material used in IIQ 8.x+)
+   ========================================================================== */
+body.iiq-theme-dark .mat-app-background,
+body.iiq-theme-dark .mat-drawer-container {
+  background-color: var(--iiq-dk-bg) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .mat-card,
+body.iiq-theme-dark .mat-dialog-container,
+body.iiq-theme-dark .mat-expansion-panel,
+body.iiq-theme-dark .mat-menu-panel,
+body.iiq-theme-dark .mat-select-panel,
+body.iiq-theme-dark .mat-autocomplete-panel,
+body.iiq-theme-dark .mat-bottom-sheet-container,
+body.iiq-theme-dark .mat-datepicker-content {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .mat-drawer,
+body.iiq-theme-dark .mat-drawer.mat-drawer-push {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .mat-table,
+body.iiq-theme-dark .mat-paginator,
+body.iiq-theme-dark .mat-tree {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .mat-toolbar {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .mat-stepper-horizontal,
+body.iiq-theme-dark .mat-stepper-vertical {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .mat-flat-button,
+body.iiq-theme-dark .mat-raised-button,
+body.iiq-theme-dark .mat-fab,
+body.iiq-theme-dark .mat-mini-fab {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .mat-button-toggle-appearance-standard,
+body.iiq-theme-dark .mat-button-toggle-disabled {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .mat-list-base .mat-list-item-disabled {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+/* ==========================================================================
+   18. APPROVAL, PROVISIONING & ACCESS REQUEST PAGES
+   ========================================================================== */
+body.iiq-theme-dark .approval .panel-heading,
+body.iiq-theme-dark .approval .panel-footer {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .identity .identity-details-container .panel-heading,
+body.iiq-theme-dark .role-profiles .panel-heading,
+body.iiq-theme-dark .alert-definition-details .panel-heading {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .home-widget .panel-heading,
+body.iiq-theme-dark .home-widget .panel-footer {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .page-settings-container {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .drag-drop .box,
+body.iiq-theme-dark .drag-drop .box.has-advanced-upload {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .post-item {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* Slider / toggle controls */
+body.iiq-theme-dark .slider-track {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .switch span,
+body.iiq-theme-dark .switch span:after {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+body.iiq-theme-dark .sp-toggle-switch .toggle {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+/* SP Tabset (Angular) */
+body.iiq-theme-dark .sp-tabset a,
+body.iiq-theme-dark .sp-tabset a.active,
+body.iiq-theme-dark .sp-tabset li.active {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* Flyout panels */
+body.iiq-theme-dark #flyout.collapse.in,
+body.iiq-theme-dark #flyout-alerts-all.collapse.in,
+body.iiq-theme-dark #flyout.collapsing {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* Access History */
+body.iiq-theme-dark sp-access-history .access-history-identity-search,
+body.iiq-theme-dark sp-access-history sp-event-timeline .event-card-content,
+body.iiq-theme-dark sp-access-history sp-filter-category-panel .panel-body,
+body.iiq-theme-dark sp-access-history sp-identity-captures-panel .access-history-event-timeline,
+body.iiq-theme-dark sp-access-history sp-tiles-panel .tile,
+body.iiq-theme-dark sp-access-history #spCaptureAttributesPanel .attributes-panel,
+body.iiq-theme-dark sp-access-history #spCaptureExportPanel .export-panel,
+body.iiq-theme-dark sp-access-history sp-event-filter-modal .event-filter-scrollable-main {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* Application Onboarding */
+body.iiq-theme-dark sp-application-onboard .additional-options {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+/* Certification Scheduling */
+body.iiq-theme-dark sp-certification-schedule #identity-certification-schedule-item .item-panel .panel-heading,
+body.iiq-theme-dark sp-certification-schedule #identity-certification-schedule-item .item-panel .panel-footer,
+body.iiq-theme-dark sp-certification-schedule #identity-certification-schedule-timeline .timeline-panel .panel-heading,
+body.iiq-theme-dark sp-certification-schedule #identity-certification-schedule-timeline .accordion-footer,
+body.iiq-theme-dark sp-certification-schedule #identity-certification-schedule-timeline .accordion-section-footer,
+body.iiq-theme-dark sp-certification-schedule #identity-certification-schedule-timeline .additional-panel .panel-footer {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* ==========================================================================
+   19. ALERT & NOTIFICATION MODALS
+   ========================================================================== */
+body.iiq-theme-dark .alert-modal .modal-body.modal-danger,
+body.iiq-theme-dark .alert-modal .modal-body.modal-warn,
+body.iiq-theme-dark .alert-modal .modal-body.modal-warning {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark div[role="dialog"].warning-modal .modal-header,
+body.iiq-theme-dark modal-container div[role=document].warning-modal .modal-header {
+  border-bottom-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .additional-questions-dialog .section-light {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .additional-questions-dialog .panel-footer {
+  background-color: var(--iiq-dk-surface-header) !important;
+}
+
+/* Datepicker */
+body.iiq-theme-dark .bs-datepicker,
+body.iiq-theme-dark .bs-datepicker-custom-range {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* ==========================================================================
+   20. CATCH-ALL: ELEMENTS WITH INLINE STYLE BACKGROUNDS
+   CSS attribute selector targets any element that has inline background set
+   ========================================================================== */
+body.iiq-theme-dark [style*="background-color: white"],
+body.iiq-theme-dark [style*="background-color:#fff"],
+body.iiq-theme-dark [style*="background-color: #fff"],
+body.iiq-theme-dark [style*="background-color:#FFFFFF"],
+body.iiq-theme-dark [style*="background-color: #FFFFFF"],
+body.iiq-theme-dark [style*="background:#fff"],
+body.iiq-theme-dark [style*="background: #fff"],
+body.iiq-theme-dark [style*="background:#FFFFFF"],
+body.iiq-theme-dark [style*="background: #FFFFFF"],
+body.iiq-theme-dark [style*="background:white"],
+body.iiq-theme-dark [style*="background: white"],
+body.iiq-theme-dark [style*="background-color: rgb(255, 255, 255)"],
+body.iiq-theme-dark [style*="background-color: rgb(255,255,255)"] {
+  background-color: var(--iiq-dk-surface) !important;
+  background-image: none !important;
+}
+
+/* ==========================================================================
+   21. ELEMENT-LEVEL OVERRIDES: ExtJS 4 Framework Components
+   These are the actual UI widgets that ExtJS renders with white backgrounds.
+   Source: SPFiles/css/ext4-overrides.css and ExtJS default theme.
+   ========================================================================== */
+
+/* --- ExtJS 4 Grid Headers (Object Browser column headers) --- */
+body.iiq-theme-dark .x-grid-header-ct,
+body.iiq-theme-dark .x-column-header,
+body.iiq-theme-dark .x-column-header-inner,
+body.iiq-theme-dark .x-column-header-over,
+body.iiq-theme-dark .x-column-header-trigger {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* --- ExtJS 4 Grid Cells & Rows --- */
+body.iiq-theme-dark .x-grid-cell,
+body.iiq-theme-dark .x-grid-cell-inner,
+body.iiq-theme-dark .x-grid-row .x-grid-cell,
+body.iiq-theme-dark .x-grid-row-over .x-grid-cell,
+body.iiq-theme-dark .x-grid-row-alt .x-grid-cell,
+body.iiq-theme-dark .x-grid-rowbody,
+body.iiq-theme-dark .x-grid-row-body,
+body.iiq-theme-dark .x-grid3-row-expanded,
+body.iiq-theme-dark .detailsPanel,
+body.iiq-theme-dark .detailsPanelContent,
+body.iiq-theme-dark .spGridBody {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-grid-row-selected .x-grid-cell,
+body.iiq-theme-dark .x-grid-row-selected {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+  border-color: var(--iiq-dk-accent) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-grid-row-over .x-grid-cell {
+  background-color: rgba(56, 189, 248, 0.06) !important;
+}
+
+/* --- ExtJS 4 Grid Body / Viewport / Scroller --- */
+body.iiq-theme-dark .x-grid-view,
+body.iiq-theme-dark .x-grid-body,
+body.iiq-theme-dark .x-grid-empty {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* --- ExtJS 4 Toolbars (pagination bar in Object Browser) --- */
+body.iiq-theme-dark .x-toolbar,
+body.iiq-theme-dark .x-toolbar-default,
+body.iiq-theme-dark .x-toolbar-docked-top,
+body.iiq-theme-dark .x-toolbar-docked-bottom,
+body.iiq-theme-dark .x-toolbar-footer,
+body.iiq-theme-dark .x-toolbar-default-docked-top,
+body.iiq-theme-dark .x-toolbar-default-docked-bottom,
+body.iiq-theme-dark .x-paging-toolbar {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-toolbar .x-toolbar-text,
+body.iiq-theme-dark .x-paging-info {
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+/* --- ExtJS 4 Toolbar Buttons & Generic Buttons --- */
+body.iiq-theme-dark .x-btn,
+body.iiq-theme-dark .x-btn-inner,
+body.iiq-theme-dark .x-btn-text,
+body.iiq-theme-dark .x-btn-default-small,
+body.iiq-theme-dark .x-btn-default-medium,
+body.iiq-theme-dark .x-btn-default-large,
+body.iiq-theme-dark .x-btn-default-toolbar-small,
+body.iiq-theme-dark .x-btn-default-toolbar-medium,
+body.iiq-theme-dark .x-btn-default-toolbar-large {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-btn-over,
+body.iiq-theme-dark .x-btn:hover {
+  background-color: var(--iiq-dk-surface-header) !important;
+}
+
+body.iiq-theme-dark .x-btn-default-toolbar-small-disabled,
+body.iiq-theme-dark .x-btn-default-toolbar-medium-disabled,
+body.iiq-theme-dark .x-btn-default-toolbar-large-disabled,
+body.iiq-theme-dark .x-btn-disabled,
+body.iiq-theme-dark .x-btn.x-btn-disabled .x-btn-inner,
+body.iiq-theme-dark .x-btn.x-item-disabled .x-btn-inner {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  opacity: 0.5;
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+/* --- ExtJS 4 Tab Bar & Tabs (from ext4-overrides.css) --- */
+body.iiq-theme-dark .x-tab-bar,
+body.iiq-theme-dark .x-tab-bar-body,
+body.iiq-theme-dark .x-tab-bar-strip {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .x-tab-default-top,
+body.iiq-theme-dark .x-tab {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .x-tab-default-top-active,
+body.iiq-theme-dark .x-tab-active {
+  background-color: var(--iiq-dk-surface) !important;
+  background-image: none !important;
+  border-bottom-color: var(--iiq-dk-surface) !important;
+}
+
+body.iiq-theme-dark .x-tab button,
+body.iiq-theme-dark .x-tab-inner {
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+body.iiq-theme-dark .x-tab-active button,
+body.iiq-theme-dark .x-tab-active .x-tab-inner {
+  color: var(--iiq-dk-accent) !important;
+}
+
+/* --- ExtJS 4 Accordion Panels (from ext4-overrides.css lines 14-27) --- */
+body.iiq-theme-dark .x-accordion-hd {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+}
+
+body.iiq-theme-dark .x-accordion-hd .x-panel-header-text {
+  color: var(--iiq-dk-text) !important;
+}
+
+/* --- ExtJS 4 Panel Headers --- */
+body.iiq-theme-dark .x-panel-header-default,
+body.iiq-theme-dark .x-panel-header-text-default {
+  color: var(--iiq-dk-text) !important;
+}
+
+/* --- ExtJS 4 Form Fields (inputs inside ExtJS panels) --- */
+body.iiq-theme-dark .x-form-text,
+body.iiq-theme-dark .x-form-field,
+body.iiq-theme-dark .x-form-trigger-wrap,
+body.iiq-theme-dark .x-form-trigger-input-cell,
+body.iiq-theme-dark .x-form-trigger,
+body.iiq-theme-dark .x-form-item-body {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-form-text:disabled {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border-subtle) !important;
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+body.iiq-theme-dark .x-form-item-label,
+body.iiq-theme-dark .x-form-cb-label {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-form-invalid-under ul li {
+  color: var(--iiq-dk-text) !important;
+}
+
+/* --- ExtJS 4 BoundList (dropdown items) --- */
+body.iiq-theme-dark .x-boundlist,
+body.iiq-theme-dark .x-boundlist-list-ct {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-boundlist-item {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-boundlist-item-over {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-boundlist-selected {
+  background-color: rgba(56, 189, 248, 0.2) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* --- ExtJS 4 Menu (context menus) --- */
+body.iiq-theme-dark .x-menu,
+body.iiq-theme-dark .x-menu-body,
+body.iiq-theme-dark .x-menu-list,
+body.iiq-theme-dark .main-submenu {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  background-image: none !important;
+}
+
+body.iiq-theme-dark .x-menu-item,
+body.iiq-theme-dark .x-menu-list-item {
+  background-color: transparent !important;
+  border-color: transparent !important; /* Fixes white box outline around items */
+  background-image: none !important;
+}
+
+body.iiq-theme-dark .x-menu-item-link,
+body.iiq-theme-dark .x-menu-item-text {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-menu-item-active,
+body.iiq-theme-dark .x-menu-item-active .x-menu-item-link,
+body.iiq-theme-dark .x-menu-item-active .x-menu-item-text,
+body.iiq-theme-dark .x-menu-item-over,
+body.iiq-theme-dark .x-menu-item-over .x-menu-item-link {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+  color: var(--iiq-dk-accent) !important;
+  border-color: transparent !important;
+}
+
+body.iiq-theme-dark .x-menu-icon-separator {
+  border-color: var(--iiq-dk-border) !important;
+  background-color: transparent !important;
+}
+
+/* --- ExtJS 4 Window & Panel components --- */
+body.iiq-theme-dark .x-window,
+body.iiq-theme-dark .x-window-default {
+  background-color: var(--iiq-dk-bg) !important;
+  border-color: var(--iiq-dk-border) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5) !important;
+}
+
+body.iiq-theme-dark .x-window-header,
+body.iiq-theme-dark .x-window-header-default,
+body.iiq-theme-dark .x-panel-header,
+body.iiq-theme-dark .x-panel-header-default {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .x-window-header-text-default,
+body.iiq-theme-dark .x-panel-header-text {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-window-body,
+body.iiq-theme-dark .x-window-body-default,
+body.iiq-theme-dark .x-panel-body,
+body.iiq-theme-dark .x-panel-body-default,
+body.iiq-theme-dark .x-panel-body-noheader {
+  background-color: var(--iiq-dk-bg) !important;
+  color: var(--iiq-dk-text) !important;
+  border-color: transparent !important; /* Fixes white ring inside windows */
+}
+
+/* Fix window footers (Save/Cancel buttons area) */
+body.iiq-theme-dark .x-window-footer,
+body.iiq-theme-dark .x-toolbar-footer {
+  background-color: var(--iiq-dk-surface) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* --- ExtJS 4 Tree panel (tree nodes in Object Browser) --- */
+body.iiq-theme-dark .x-tree-panel,
+body.iiq-theme-dark .x-tree-panel .x-grid-cell {
+  background-color: var(--iiq-dk-surface) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-tree-panel table tr.x-grid-row-selected td {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+}
+
+/* --- ExtJS 4 Property Grid --- */
+body.iiq-theme-dark .x-property-grid .x-grid-row .x-grid-property-name .x-grid-cell-inner {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* --- ExtJS 4 Fieldset headers --- */
+body.iiq-theme-dark .x-fieldset-header {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .x-fieldset {
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* --- ExtJS 4 Splitters --- */
+body.iiq-theme-dark .x-splitter-vertical,
+body.iiq-theme-dark .x-splitter-horizontal {
+  background-color: var(--iiq-dk-border) !important;
+}
+
+/* --- ExtJS 4 Tabpanel child panels --- */
+body.iiq-theme-dark .x-tabpanel-child {
+  background-color: var(--iiq-dk-surface) !important;
+}
+
+/* ==========================================================================
+   22. ELEMENT-LEVEL OVERRIDES: HTML Rich Text Editor (TinyMCE / HtmlEditor)
+   The Description field in Edit Application uses an iframe-based editor.
+   ========================================================================== */
+body.iiq-theme-dark .x-html-editor-wrap,
+body.iiq-theme-dark .x-html-editor-tb {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* ==========================================================================
+   23. ELEMENT-LEVEL OVERRIDES: Code Editor (Object Browser XML modal)
+   Force light-mode appearance ONLY for SailPoint's stock .cm-s-sailpoint /
+   .cm-s-default themes. Third-party cm themes picked from the Theme combo
+   (3024 Night, Eclipse, ...) must keep their own backgrounds & token colors.
+   ========================================================================== */
+body.iiq-theme-dark .CodeMirror.cm-s-sailpoint,
+body.iiq-theme-dark .cm-s-sailpoint,
+body.iiq-theme-dark .cm-s-default {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-scroll,
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-sizer,
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-lines,
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-linebackground,
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-code,
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-code > div,
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-line {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-gutters {
+  background-color: #f7f7f7 !important;
+  border-right: 1px solid #ddd !important;
+}
+
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-linenumber {
+  color: #999999 !important;
+  background-color: #f7f7f7 !important;
+}
+
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-cursor {
+  border-left: 1px solid #000000 !important;
+}
+
+body.iiq-theme-dark .cm-s-sailpoint .CodeMirror-activeline-background {
+  background-color: #e8f2ff !important;
+}
+
+/* SailPoint CodeMirror Syntax Highlighting (Light Theme defaults) */
+body.iiq-theme-dark .cm-s-sailpoint span.cm-meta { color: #FF1717 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-keyword { line-height: 1em; font-weight: bold; color: #7F0055 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-atom { color: #219 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-number { color: #164 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-def { color: #00f !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-variable { color: #000000 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-variable-2 { color: #0000C0 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-variable-3 { color: #0000C0 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-property { color: #000000 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-operator { color: #000000 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-comment { color: #3F7F5F !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-string { color: #1447bf !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-string-2 { color: #f50 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-error { color: #f00 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-qualifier { color: #555 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-builtin { color: #30a !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-bracket { color: #cc7 !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-tag { color: #3f7f7f !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-attribute { color: #7f007f !important; }
+body.iiq-theme-dark .cm-s-sailpoint span.cm-link { color: #219 !important; }
+
+
+/* ==========================================================================
+   24. ELEMENT-LEVEL OVERRIDES: Bootstrap Input Groups & Addons
+   ========================================================================== */
+body.iiq-theme-dark .input-group-addon {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .input-group-btn .btn {
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* --- Dropdown menus (Bootstrap) --- */
+body.iiq-theme-dark .dropdown-menu {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .dropdown-menu > li > a {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .dropdown-menu > li > a:hover,
+body.iiq-theme-dark .dropdown-menu > li > a:focus,
+body.iiq-theme-dark .dropdown-menu > .active > a {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+  color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .dropdown-header {
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+body.iiq-theme-dark .dropdown-menu .divider {
+  background-color: var(--iiq-dk-border) !important;
+}
+
+/* ==========================================================================
+   25. ELEMENT-LEVEL OVERRIDES: Footer / Copyright Bar
+   ========================================================================== */
+body.iiq-theme-dark #copyright,
+body.iiq-theme-dark .copyright,
+body.iiq-theme-dark #footer,
+body.iiq-theme-dark .footer,
+body.iiq-theme-dark #spFooter,
+body.iiq-theme-dark .spFooter {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text-muted) !important;
+  border-top-color: var(--iiq-dk-border) !important;
+}
+
+/* ==========================================================================
+   26. ELEMENT-LEVEL OVERRIDES: Native HTML elements that SailPoint doesn't 
+   wrap in a class (bare <input>, <select>, <textarea>, <option>)
+   ========================================================================== */
+body.iiq-theme-dark input,
+body.iiq-theme-dark select,
+body.iiq-theme-dark textarea,
+body.iiq-theme-dark option {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark input:focus,
+body.iiq-theme-dark select:focus,
+body.iiq-theme-dark textarea:focus {
+  border-color: var(--iiq-dk-accent) !important;
+  box-shadow: 0 0 0 3px var(--iiq-dk-accent-glow) !important;
+  outline: none;
+}
+
+/* Keep checkboxes and radios from being force-colored */
+body.iiq-theme-dark input[type="checkbox"],
+body.iiq-theme-dark input[type="radio"] {
+  background-color: transparent !important;
+}
+
+/* Keep submit/reset/button inputs looking like buttons, not form fields */
+body.iiq-theme-dark input[type="submit"],
+body.iiq-theme-dark input[type="reset"],
+body.iiq-theme-dark input[type="button"] {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+  cursor: pointer;
+}
+
+/* Placeholder text */
+body.iiq-theme-dark input::placeholder,
+body.iiq-theme-dark textarea::placeholder {
+  color: var(--iiq-dk-text-muted) !important;
+  opacity: 1;
+}
+
+body.iiq-theme-dark input::-webkit-input-placeholder,
+body.iiq-theme-dark textarea::-webkit-input-placeholder {
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+/* ==========================================================================
+   27. SAILPOINT CLASSIC BUTTONS (buttons.css) – these ship with !important
+   white/gray backgrounds that beat normal overrides; must match with
+   equal-strength !important rules.
+   Sources: SPFiles/css/sailpoint/buttons.css lines 51-134
+   ========================================================================== */
+
+/* Secondary buttons ("Cancel", "Search", rule "..." buttons, paging arrows) */
+body.iiq-theme-dark .secondaryBtn,
+body.iiq-theme-dark .ruleEditorBtn,
+body.iiq-theme-dark .pagingButton,
+body.iiq-theme-dark input[onclick*="_popUpCalendarForInputDate"][type="button"] {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  background-image: none !important;
+  border: solid 1px var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-accent) !important;
+}
+
+/* ExtJS-flavored secondary buttons render label inside an inner span */
+body.iiq-theme-dark .secondaryBtn .x-btn-inner,
+body.iiq-theme-dark .ruleEditorBtn .x-btn-inner,
+body.iiq-theme-dark .pagingButton .x-btn-inner {
+  color: var(--iiq-dk-accent) !important;
+}
+
+/* Hover / focus states (base uses #fbfbfb !important) */
+body.iiq-theme-dark .secondaryBtn:hover,
+body.iiq-theme-dark .secondaryBtn:focus,
+body.iiq-theme-dark .ruleEditorBtn:hover,
+body.iiq-theme-dark .ruleEditorBtn:focus,
+body.iiq-theme-dark .pagingButton:hover,
+body.iiq-theme-dark .pagingButton:focus,
+body.iiq-theme-dark input[onclick*="_popUpCalendarForInputDate"][type="button"]:hover,
+body.iiq-theme-dark input[onclick*="_popUpCalendarForInputDate"][type="button"]:focus {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-accent) !important;
+  color: var(--iiq-dk-accent-hover) !important;
+}
+
+/* Active state (base uses #f0f0f0 !important) */
+body.iiq-theme-dark .secondaryBtn:active,
+body.iiq-theme-dark .ruleEditorBtn:active,
+body.iiq-theme-dark input[onclick*="_popUpCalendarForInputDate"][type="button"]:active {
+  background-color: var(--iiq-dk-bg) !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-accent) !important;
+  color: var(--iiq-dk-accent-hover) !important;
+}
+
+/* Disabled buttons (base forces #e8e8e8 bg / #aaaaaa text with !important) */
+body.iiq-theme-dark .primaryBtn[disabled],
+body.iiq-theme-dark .primaryBtn[disabled]:hover,
+body.iiq-theme-dark .primaryBtn[disabled]:active,
+body.iiq-theme-dark .primaryBtn.x-btn-disabled,
+body.iiq-theme-dark .primaryBtn.x-btn-disabled:hover,
+body.iiq-theme-dark .primaryBtn.x-btn-disabled:active,
+body.iiq-theme-dark .secondaryBtn[disabled],
+body.iiq-theme-dark .secondaryBtn[disabled]:hover,
+body.iiq-theme-dark .secondaryBtn[disabled]:active,
+body.iiq-theme-dark .ruleEditorBtn[disabled],
+body.iiq-theme-dark .ruleEditorBtn[disabled]:hover,
+body.iiq-theme-dark .ruleEditorBtn[disabled]:active,
+body.iiq-theme-dark input[onclick*="_popUpCalendarForInputDate"][type="button"][disabled],
+body.iiq-theme-dark input[onclick*="_popUpCalendarForInputDate"][type="button"][disabled]:hover,
+body.iiq-theme-dark input[onclick*="_popUpCalendarForInputDate"][type="button"][disabled]:active,
+body.iiq-theme-dark .pagingButton[disabled],
+body.iiq-theme-dark .pagingButtonDisabled,
+body.iiq-theme-dark .pagingButton[disabled]:hover {
+  background-color: #232a3d !important;
+  background-image: none !important;
+  color: #64748b !important;
+  border-color: transparent !important;
+  opacity: 0.7;
+}
+
+body.iiq-theme-dark .primaryBtn.x-btn-disabled .x-btn-inner,
+body.iiq-theme-dark .primaryBtn.x-btn-disabled:hover .x-btn-inner {
+  color: #94a3b8 !important;
+}
+
+/* Paging info box between prev/next arrows (base: #dadada bg / #333 text) */
+body.iiq-theme-dark .pagingInfo {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  background-image: none !important;
+  border: solid 1px var(--iiq-dk-border) !important;
+  color: var(--iiq-dk-text-secondary) !important;
+}
+
+/* ==========================================================================
+   28. ANGULAR UI BUTTON STATES (ui/css/theme.css) – btn-white hover/focus/
+   active/disabled variants and soft background utility classes.
+   Sources: theme.css lines 12212-12216, 12827-12836, 13731-13769
+   ========================================================================== */
+body.iiq-theme-dark .btn-white:focus,
+body.iiq-theme-dark .btn-white:active,
+body.iiq-theme-dark .btn-white.active,
+body.iiq-theme-dark .btn-white:focus:active {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+  border-color: var(--iiq-dk-accent) !important;
+}
+
+body.iiq-theme-dark .btn-white.disabled,
+body.iiq-theme-dark .btn-white[disabled],
+body.iiq-theme-dark fieldset[disabled] .btn-white {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: #64748b !important;
+  opacity: 0.6;
+}
+
+/* Soft gray utility backgrounds used on panel headers & list rows (.lt/.lter/.dk/.dker shades) */
+body.iiq-theme-dark .bg-light,
+body.iiq-theme-dark .bg-light.lt,
+body.iiq-theme-dark .bg-light .lt,
+body.iiq-theme-dark .bg-light.lter,
+body.iiq-theme-dark .bg-light .lter,
+body.iiq-theme-dark .bg-light.dk,
+body.iiq-theme-dark .bg-light .dk,
+body.iiq-theme-dark .bg-light.dker,
+body.iiq-theme-dark .bg-light .dker,
+body.iiq-theme-dark .bg-white-only,
+body.iiq-theme-dark .bg-auto {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark .panel-heading.bg-light,
+body.iiq-theme-dark .panel-heading.bg-light.lter,
+body.iiq-theme-dark .panel-heading.bg-light.dker {
+  background-color: var(--iiq-dk-surface-header) !important;
+}
+
+body.iiq-theme-dark .bg-light.bg-light-row,
+body.iiq-theme-dark tr.bg-light td {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+/* ==========================================================================
+   29. REMAINING CLASSIC WHITES found via audit of SPFiles css
+   ========================================================================== */
+
+/* Search panel (sp-components/classic pages: #EEEEEE !important + gray border) */
+body.iiq-theme-dark .searchPanel {
+  background-color: var(--iiq-dk-surface) !important;
+  border: 1px solid var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark .searchPanel > .x-panel-body {
+  background-color: transparent !important;
+}
+
+/* Electronic signature tooltip header (#EEEEEE) */
+body.iiq-theme-dark .eSigToolTipTitle {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* Disabled detail-table cells (#F0F0F0) */
+body.iiq-theme-dark td.disabled {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+/* sp-components table headers (#EEEEEE !important) */
+body.iiq-theme-dark th.spComponentsTableHeader,
+body.iiq-theme-dark .sp-component-table th {
+  background-color: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* ==========================================================================
+   30. QUICK LINK SIDEBAR (#quicklinkPanel)
+   Base ships it as .bg-primary.lt = solid SailPoint indigo #011E69, which
+   looks like a giant purple block in dark mode. Re-skin the whole panel.
+   Source: quicklinks.xhtml line 22, ui/css/theme.css .bg-primary
+   ========================================================================== */
+body.iiq-theme-dark #quicklinkPanel,
+body.iiq-theme-dark #quicklinkPanel.bg-primary,
+body.iiq-theme-dark #quicklinkPanel.bg-primary.lt,
+body.iiq-theme-dark .quicklink-panel.bg-primary.lt {
+  background-color: var(--iiq-dk-surface) !important;
+  border-right: 1px solid var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark #quicklinkPanel ul,
+body.iiq-theme-dark #quicklinkPanel li.panel,
+body.iiq-theme-dark #quicklinkPanel .nav-primary,
+body.iiq-theme-dark #quicklinkPanel .panel-collapse.panel-body {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+body.iiq-theme-dark #quicklinkPanel a.menuitem,
+body.iiq-theme-dark #quicklinkPanel .nav-primary a,
+body.iiq-theme-dark #quicklinkPanel a.panel-heading,
+body.iiq-theme-dark #quicklinkPanel .dropdown-toggle {
+  color: var(--iiq-dk-text) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+body.iiq-theme-dark #quicklinkPanel a.menuitem:hover,
+body.iiq-theme-dark #quicklinkPanel a.menuitem:focus,
+body.iiq-theme-dark #quicklinkPanel a.panel-heading:hover,
+body.iiq-theme-dark #quicklinkPanel li.open > a.panel-heading {
+  background-color: rgba(56, 189, 248, 0.10) !important;
+  color: var(--iiq-dk-accent) !important;
+}
+
+/* Category icons & chevrons */
+body.iiq-theme-dark #quicklinkPanel .quicklink-panel-category,
+body.iiq-theme-dark #quicklinkPanel .quicklink-panel-link-angle i {
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+/* Nested submenu lists inside the sidebar */
+body.iiq-theme-dark #quicklinkPanel li.dropdown-submenu ul,
+body.iiq-theme-dark #quicklinkPanel .dropdown-menu {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+body.iiq-theme-dark #quicklinkPanel li.dropdown-submenu ul li a {
+  color: var(--iiq-dk-text) !important;
+}
+
+body.iiq-theme-dark #quicklinkPanel li.dropdown-submenu ul li a:hover {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+  color: var(--iiq-dk-accent) !important;
+}
+
+/* ==========================================================================
+   31. CLASSIC FOOTER BAR (the "lining" at the bottom of every page)
+   rounded.css gives #bodyDivFooter a gray border + radius and ng-app.css
+   paints it brand indigo #011E69 – renders as an awkward outlined band.
+   Blend it into the page instead.
+   ========================================================================== */
+body.iiq-theme-dark #bodyDivFooter,
+body.iiq-theme-dark .bodyDivFooter {
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-top: 24px !important;
+}
+
+body.iiq-theme-dark .footerMessageDiv,
+body.iiq-theme-dark #bodyBottom,
+body.iiq-theme-dark #bodyBottomTd.roundedBottom {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: var(--iiq-dk-text-muted) !important;
+}
+
+body.iiq-theme-dark #spFooterPanelDiv {
+  background-color: var(--iiq-dk-bg) !important;
+  background-image: none !important;
+}
+
+/* ==========================================================================
+   32. BOOTSTRAP CONTEXTUAL TABLE STATES (success / danger / warning / info)
+   theme.css paints td.success cells light mint #ecf9f1 etc., which shows up
+   as distorted bright patches around status badges on dark pages.
+   Replace with translucent tints that read correctly on dark surfaces.
+   ========================================================================== */
+body.iiq-theme-dark .table > thead > tr.success > th,
+body.iiq-theme-dark .table > tbody > tr.success > td,
+body.iiq-theme-dark .table > tfoot > tr.success > td,
+body.iiq-theme-dark .table > tbody > tr.success > th,
+body.iiq-theme-dark .table > tbody > tr > td.success,
+body.iiq-theme-dark .table > tbody > tr > th.success,
+body.iiq-theme-dark td.success,
+body.iiq-theme-dark tr.success > td {
+  background-color: rgba(34, 197, 94, 0.14) !important;
+  color: #4ade80 !important;
+}
+
+body.iiq-theme-dark .table > tbody > tr.danger > td,
+body.iiq-theme-dark .table > tbody > tr > td.danger,
+body.iiq-theme-dark .table > thead > tr.danger > th,
+body.iiq-theme-dark td.danger,
+body.iiq-theme-dark tr.danger > td {
+  background-color: rgba(239, 68, 68, 0.14) !important;
+  color: #f87171 !important;
+}
+
+body.iiq-theme-dark .table > tbody > tr.warning > td,
+body.iiq-theme-dark .table > tbody > tr > td.warning,
+body.iiq-theme-dark .table > thead > tr.warning > th,
+body.iiq-theme-dark td.warning,
+body.iiq-theme-dark tr.warning > td {
+  background-color: rgba(245, 158, 11, 0.14) !important;
+  color: #fbbf24 !important;
+}
+
+body.iiq-theme-dark .table > tbody > tr.info > td,
+body.iiq-theme-dark .table > tbody > tr > td.info,
+body.iiq-theme-dark .table > thead > tr.info > th,
+body.iiq-theme-dark td.info,
+body.iiq-theme-dark tr.info > td {
+  background-color: rgba(56, 189, 248, 0.12) !important;
+  color: #38bdf8 !important;
+}
+
+/* Keep status badge images (glossy spheres) crisp – no boxes around them */
+body.iiq-theme-dark td.success img,
+body.iiq-theme-dark td.danger img,
+body.iiq-theme-dark td.warning img,
+body.iiq-theme-dark td.info img {
+  background-color: transparent !important;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   33. OBJECT BROWSER XML EDITOR (#debug-editor) – STOCK LIGHT WINDOW
+   headerInject.js tags #debug-editor with .iiq-light-modal. We scope every
+   override to that id so normal dark ExtJS windows stay dark. Colors mirror
+   ExtJS 4 stock light theme (x-window-body #dfe8f6, header #ced9e7,
+   header text #04468c) so the editor looks exactly like default IIQ.
+   ========================================================================== */
+html body.iiq-theme-dark #debug-editor {
+  background-color: #dfe8f6 !important;
+  border-color: #99bbe8 !important;
+  color: #111827 !important;
+}
+
+html body.iiq-theme-dark #debug-editor .x-window-body,
+html body.iiq-theme-dark #debug-editor .x-window-body-default,
+html body.iiq-theme-dark #debug-editor .x-panel-body,
+html body.iiq-theme-dark #debug-editor .x-panel-body-default,
+html body.iiq-theme-dark #debug-editor .x-panel-bwrap {
+  background-color: #dfe8f6 !important;
+  background-image: none !important;
+  border-color: #99bbe8 !important;
+}
+
+html body.iiq-theme-dark #debug-editor .x-window-header,
+html body.iiq-theme-dark #debug-editor .x-window-header-default,
+html body.iiq-theme-dark #debug-editor [class*="x-window-header-default"] {
+  background-color: #ced9e7 !important;
+  background-image: none !important;
+  border-color: #a2b1c5 !important;
+}
+
+html body.iiq-theme-dark #debug-editor .x-window-header-text-default,
+html body.iiq-theme-dark #debug-editor .x-form-item-label,
+html body.iiq-theme-dark #debug-editor .x-toolbar-text,
+html body.iiq-theme-dark #debug-editor label {
+  color: #04468c !important;
+}
+
+/* Body text inside the window must be dark (beats generic x-window-body
+   light-text rules from section 34 via id specificity).
+   NOTE: this would also flatten cm-* syntax tokens, so they are re-asserted
+   with higher specificity immediately below, and the CodeMirror-internal
+   restore rules right after undo it for every other cm theme. */
+html body.iiq-theme-dark #debug-editor .x-window-body,
+html body.iiq-theme-dark #debug-editor .x-window-body div:not(.CodeMirror),
+html body.iiq-theme-dark #debug-editor .x-window-body span:not([class*="cm-"]),
+html body.iiq-theme-dark #debug-editor .x-window-body p,
+html body.iiq-theme-dark #debug-editor td,
+html body.iiq-theme-dark #debug-editor th {
+  color: #111827 !important;
+}
+
+/* Restore CodeMirror internals AFTER the flattening above so ANY selected
+   cm theme keeps its own palette: line wrappers/pre inherit base text color
+   from the theme-styled .CodeMirror root; token spans carry a cm-* class
+   and keep their theme colors. */
+html body.iiq-theme-dark #debug-editor .CodeMirror pre,
+html body.iiq-theme-dark #debug-editor .CodeMirror div {
+  color: inherit !important;
+}
+html body.iiq-theme-dark #debug-editor .CodeMirror span:not([class*="cm-"]) {
+  color: inherit !important;
+}
+
+/* Syntax highlighting – MUST survive the catch-all above (1 id + 3 classes
+   beats 1 id + 2 classes). Palette mirrors SailPoint's stock cm-s-sailpoint. */
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-meta { color: #FF1717 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-keyword { color: #7F0055 !important; font-weight: bold; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-atom { color: #219 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-number { color: #164 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-def { color: #00f !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-variable { color: #000000 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-variable-2 { color: #0000C0 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-variable-3 { color: #0000C0 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-property { color: #000000 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-operator { color: #000000 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-comment { color: #3F7F5F !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-string { color: #1447bf !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-string-2 { color: #f50 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-error { color: #f00 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-qualifier { color: #555 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-builtin { color: #30a !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-bracket { color: #cc7 !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-tag { color: #3f7f7f !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-attribute { color: #7f007f !important; }
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint span.cm-link { color: #219 !important; }
+
+/* Docked toolbars (top toolbar with Theme combo + bottom Save/Close bar) */
+html body.iiq-theme-dark #debug-editor .x-toolbar,
+html body.iiq-theme-dark #debug-editor .x-toolbar-footer,
+html body.iiq-theme-dark #debug-editor .x-html-editor-tb,
+html body.iiq-theme-dark #debug-editor [class*="x-toolbar"] {
+  background-color: #f0f0f0 !important;
+  background-image: none !important;
+  border-color: #b5b8c8 !important;
+}
+
+/* ExtJS renders toolbar items (the "Theme:" label + combo) as <td> cells.
+   The GLOBAL rule body.iiq-theme-dark [class*="x-toolbar"] td paints them
+   navy – that was the black box behind the Theme label. Keep them clear. */
+html body.iiq-theme-dark #debug-editor .x-toolbar td,
+html body.iiq-theme-dark #debug-editor .x-toolbar th,
+html body.iiq-theme-dark #debug-editor .x-html-editor-tb td,
+html body.iiq-theme-dark #debug-editor .x-html-editor-tb th,
+html body.iiq-theme-dark #debug-editor [class*="x-toolbar"] td,
+html body.iiq-theme-dark #debug-editor [class*="x-toolbar"] th {
+  background-color: transparent !important;
+  background-image: none !important;
+  color: #111827 !important;
+}
+
+html body.iiq-theme-dark #debug-editor .x-form-item-label,
+html body.iiq-theme-dark #debug-editor label {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Form fields stay stock white; the CodeMirror surface follows the ACTIVE
+   cm theme – only sailpoint/default are forced white so third-party themes
+   (3024 Night etc.) keep their own dark backgrounds. */
+html body.iiq-theme-dark #debug-editor .x-form-text,
+html body.iiq-theme-dark #debug-editor .x-form-field,
+html body.iiq-theme-dark #debug-editor .x-form-trigger-wrap,
+html body.iiq-theme-dark #debug-editor .x-form-trigger-input-cell,
+html body.iiq-theme-dark #debug-editor .x-form-item-body {
+  background-color: #ffffff !important;
+  border-color: #b5b8c8 !important;
+  color: #111827 !important;
+}
+
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint.CodeMirror,
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint .CodeMirror-scroll,
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint .CodeMirror-sizer,
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint .CodeMirror-lines {
+  background-color: #ffffff !important;
+  border-color: #b5b8c8 !important;
+  color: #111827 !important;
+}
+
+/* The trigger arrow sprite must survive (do NOT background-image:none it) */
+html body.iiq-theme-dark #debug-editor .x-form-trigger {
+  background-color: transparent !important;
+}
+
+html body.iiq-theme-dark #debug-editor .CodeMirror pre,
+html body.iiq-theme-dark #debug-editor .CodeMirror-line,
+html body.iiq-theme-dark #debug-editor .CodeMirror-lines pre {
+  background-color: transparent !important;
+}
+
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint .CodeMirror-gutters {
+  background-color: #f7f7f7 !important;
+  border-right: 1px solid #ddd !important;
+}
+
+html body.iiq-theme-dark #debug-editor .cm-s-sailpoint .CodeMirror-linenumber {
+  background-color: transparent !important;
+  color: #999999 !important;
+}
+
+/* Buttons (Save / Close) – stock light gray */
+html body.iiq-theme-dark #debug-editor .x-btn,
+html body.iiq-theme-dark #debug-editor .x-btn-inner,
+html body.iiq-theme-dark #debug-editor .x-btn button {
+  background-color: #ebebeb !important;
+  background-image: none !important;
+  border-color: #b5b8c8 !important;
+  color: #1f2937 !important;
+}
+
+/* ExtJS renders the CodeMirror Theme combo dropdown OUTSIDE #debug-editor
+   as a floating .x-boundlist with id themeCombo-picker. Keep it stock white. */
+html body.iiq-theme-dark #themeCombo-picker,
+html body.iiq-theme-dark .x-boundlist.iiq-light-picker {
+  background-color: #ffffff !important;
+  border-color: #98c0f4 !important;
+  color: #111827 !important;
+}
+
+html body.iiq-theme-dark #themeCombo-picker .x-boundlist-item,
+html body.iiq-theme-dark .x-boundlist.iiq-light-picker .x-boundlist-item {
+  background-color: #ffffff !important;
+  border-color: #ffffff !important;
+  color: #111827 !important;
+}
+
+html body.iiq-theme-dark #themeCombo-picker .x-boundlist-item-over,
+html body.iiq-theme-dark #themeCombo-picker .x-boundlist-selected,
+html body.iiq-theme-dark .x-boundlist.iiq-light-picker .x-boundlist-item-over,
+html body.iiq-theme-dark .x-boundlist.iiq-light-picker .x-boundlist-selected {
+  background-color: #dfe8f6 !important;
+  border-color: #a3bae9 !important;
+  color: #111827 !important;
+}
+
+/* ==========================================================================
+   34. MODALS & OVERLAY DIALOGS – readable text on dark
+   ========================================================================== */
+/* Generic Bootstrap / spModal dialogs (session timeout, confirmation, etc.)
+   must have light body text; base CSS paints p/div grey for white modals */
+body.iiq-theme-dark .modal-body,
+body.iiq-theme-dark .modal-body p,
+body.iiq-theme-dark .modal-body div,
+body.iiq-theme-dark .modal-body span,
+body.iiq-theme-dark #pretimeoutDialog,
+body.iiq-theme-dark #pretimeoutDialog p,
+body.iiq-theme-dark #pretimeoutDialog div,
+body.iiq-theme-dark #timeoutDialog,
+body.iiq-theme-dark #timeoutDialog p,
+body.iiq-theme-dark #timeoutDialog div {
+  color: var(--iiq-dk-text) !important;
+}
+body.iiq-theme-dark .modal-body a,
+body.iiq-theme-dark #pretimeoutDialog a,
+body.iiq-theme-dark #timeoutDialog a,
+body.iiq-theme-dark .x-window-body a,
+body.iiq-theme-dark .ext-mb-content a {
+  color: var(--iiq-dk-accent) !important;
+}
+/* Warning icon stays vibrant; don't wash it to white */
+body.iiq-theme-dark .modal-body img,
+body.iiq-theme-dark #pretimeoutDialog img,
+body.iiq-theme-dark #timeoutDialog img,
+body.iiq-theme-dark .x-window-body img {
+  background-color: transparent !important;
+}
+/* Generic ExtJS MessageBox / “Executed In Background” - dark text on dark was invisible.
+   cm-* tokens are excluded – their colors belong to the active CodeMirror theme. */
+body.iiq-theme-dark .x-window-body,
+body.iiq-theme-dark .x-window-body p,
+body.iiq-theme-dark .x-window-body div:not(.CodeMirror):not(.CodeMirror-wrap),
+body.iiq-theme-dark .x-window-body span:not([class*="cm-"]):not(.CodeMirror-line),
+body.iiq-theme-dark .ext-mb-text,
+body.iiq-theme-dark .ext-mb-content,
+body.iiq-theme-dark .x-message-box .ext-mb-text {
+  color: var(--iiq-dk-text) !important;
+}
+
+/* ==========================================================================
+   35. WORKFLOW / BUSINESS PROCESS EDITOR & PAGE TITLE WHITES
+   Pages like workflow.jsf render a combination Ext/Angular viewport where
+   #pageTitle and .x-panel-mc ship with pure-white backgrounds that appear
+   as massive white bands in dark mode.
+   NOTE: #workflowDesigner is intentionally NOT darkened here – its Raphael
+   SVG diagram + PNG step sprites are authored for a white canvas. It is
+   force-kept light in section 41 and protected in headerInject.js.
+   ========================================================================== */
+body.iiq-theme-dark #pageTitle,
+body.iiq-theme-dark #pageTitle table,
+body.iiq-theme-dark #pageTitle td,
+body.iiq-theme-dark #pageTitle tr,
+body.iiq-theme-dark #spErrorMsgsDiv,
+body.iiq-theme-dark .lcmErrorMsgsDiv,
+body.iiq-theme-dark .x-panel-mc,
+body.iiq-theme-dark .x-window-mc,
+body.iiq-theme-dark .x-window-plain .x-window-body,
+body.iiq-theme-dark #workflowPanel,
+body.iiq-theme-dark #title,
+body.iiq-theme-dark .pageTitle {
+  background-color: var(--iiq-dk-bg) !important;
+  background-image: none !important;
+  border-color: transparent !important;
+}
+
+/* ==========================================================================
+   36. GENERAL POLISH
+   ========================================================================== */
+
+/* Slightly lift the canvas so cards/panels read with clearer separation */
+body.iiq-theme-dark {
+  --iiq-dk-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+/* Consistent focus ring across interactive elements */
+body.iiq-theme-dark a:focus,
+body.iiq-theme-dark .btn:focus {
+  outline: 2px solid var(--iiq-dk-accent);
+  outline-offset: 1px;
+}
+
+/* ==========================================================================
+   37. ANGULAR DATA-TABLE HEADERS & LIGHT ROWS (Identity Details -> Accounts)
+   application.css:2398 paints thead th light gray #dde2ee; with inherited
+   white text this is unreadable. Force dark header + light rows tints.
+   ========================================================================== */
+body.iiq-theme-dark .data-table table.table > thead > tr > th,
+body.iiq-theme-dark .data-table .data-table-full table.table > thead > tr > th {
+  background-color: var(--iiq-dk-surface-header) !important;
+  background-image: none !important;
+  color: var(--iiq-dk-text) !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+body.iiq-theme-dark .data-table table.table > thead > tr > th.col-sortable:hover,
+body.iiq-theme-dark .data-table .data-table-full table.table > thead > tr > th.col-sortable:hover {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+
+/* Light row backgrounds from application.css:2414-2425 */
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.normal-row:nth-of-type(odd),
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.normal-row:nth-of-type(odd) > td.normal-col {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+}
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.expanded-row,
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.expanded-row > td.expanded-col {
+  background-color: var(--iiq-dk-surface-header) !important;
+}
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.section-header-row,
+body.iiq-theme-dark .data-table .data-table-full table.table > tbody > tr.section-header-row > td.section-header-col {
+  background: var(--iiq-dk-surface-header) !important;
+  color: var(--iiq-dk-text) !important;
+}
+
+/* ==========================================================================
+   38. REMAINING EXTJS WHITES – docked toolbars & framed panel headers.
+   NOTE: background-image intentionally NOT stripped here (icon sprites);
+   white gradient bands are handled by the JS Pass-3 gradient sweep.
+   ========================================================================== */
+body.iiq-theme-dark [class*="x-toolbar"],
+body.iiq-theme-dark [class*="x-toolbar"] td,
+body.iiq-theme-dark .x-panel-header-default-framed,
+body.iiq-theme-dark [class*="x-panel-header-default-framed"] {
+  background-color: var(--iiq-dk-surface-header) !important;
+}
+
+/* ==========================================================================
+   39. SESSION / TIMEOUT MODALS ("Session Expired – Login again")
+   ui.bootstrap modal rendered as .modal-content; make it fully readable.
+   ========================================================================== */
+body.iiq-theme-dark .modal-content,
+body.iiq-theme-dark div[role="dialog"] {
+  background-color: var(--iiq-dk-surface-elevated) !important;
+  border: 1px solid var(--iiq-dk-border) !important;
+}
+body.iiq-theme-dark .modal-header {
+  background-color: var(--iiq-dk-surface-header) !important;
+  border-bottom: 1px solid var(--iiq-dk-border) !important;
+}
+body.iiq-theme-dark .modal-header .modal-title,
+body.iiq-theme-dark #timeoutDialog .modal-title,
+body.iiq-theme-dark #pretimeoutDialog .modal-title,
+body.iiq-theme-dark .modal-header h4,
+body.iiq-theme-dark .modal-header span,
+body.iiq-theme-dark .modal-body,
+body.iiq-theme-dark #timeoutDialog,
+body.iiq-theme-dark #pretimeoutDialog,
+body.iiq-theme-dark #timeoutDialog p,
+body.iiq-theme-dark #pretimeoutDialog p,
+body.iiq-theme-dark #timeoutDialog div,
+body.iiq-theme-dark #pretimeoutDialog div {
+  color: var(--iiq-dk-text) !important;
+}
+body.iiq-theme-dark .modal-footer {
+  background-color: var(--iiq-dk-bg) !important;
+  border-top: 1px solid var(--iiq-dk-border) !important;
+}
+body.iiq-theme-dark .modal-footer .btn,
+body.iiq-theme-dark .modal-footer button {
+  background-color: #0284c7 !important;
+  border: none !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+body.iiq-theme-dark .modal-footer .btn:hover,
+body.iiq-theme-dark .modal-footer button:hover {
+  background-color: #0369a1 !important;
+}
+
+/* Status images (glossy spheres etc.) – transparent bg only; never force
+   width/height (that distorts sprites that rely on explicit dimensions). */
+body.iiq-theme-dark td img,
+body.iiq-theme-dark .x-grid3-cell-inner img {
+  background-color: transparent !important;
+  vertical-align: middle;
+}
+
+/* Task-grid status chips are SPANS with a background-image sprite
+   (<span class="successBox font10">Success</span>), NOT <img> tags.
+   Restore their exact stock geometry + sprite using root-absolute URLs so
+   nothing in our theme can blank or squash them. */
+body.iiq-theme-dark .successBox,
+body.iiq-theme-dark .warnBox,
+body.iiq-theme-dark .failBox {
+  display: inline-block !important;
+  float: left !important;
+  box-sizing: content-box !important;
+  min-width: 20px !important;
+  padding-left: 20px !important;
+  height: 16px !important;
+  line-height: 16px !important;
+  border: none !important;
+  background-repeat: no-repeat !important;
+  background-position: left center !important;
+  background-size: 16px 16px !important;
+}
+body.iiq-theme-dark .successBox {
+  background-image: url("../../../../images/icons/dialogue_success_16.png") !important;
+  color: #5a8429 !important;
+}
+body.iiq-theme-dark .warnBox {
+  background-image: url("../../../../images/icons/dialogue_warning_16.png") !important;
+  color: #b8860b !important;
+}
+body.iiq-theme-dark .failBox {
+  background-image: url("../../../../images/icons/dialogue_error_16.png") !important;
+  color: #e06c6c !important;
+}
+body.iiq-theme-dark .successText {
+  background: url("../../../../images/icons/dialogue_success_16.png") no-repeat top left !important;
+  color: green !important;
+  text-indent: 20px;
+}
+body.iiq-theme-dark .failText {
+  background: url("../../../../images/icons/dialogue_error_16.png") no-repeat top left !important;
+  color: red !important;
+  text-indent: 20px;
+}
+
+/* ==========================================================================
+   40. OBJECT EDITOR FINAL-WORD OVERRIDES – undo global dark artifacts
+   inside #debug-editor (tool sprites, toolbar backgrounds).
+   Placed last so it wins every tie.
+   ========================================================================== */
+html body.iiq-theme-dark #debug-editor .x-tool img {
+  filter: none !important;
+}
+html body.iiq-theme-dark #debug-editor [class*="x-toolbar"],
+html body.iiq-theme-dark #debug-editor [class*="x-panel-header"] {
+  background-color: #f0f0f0 !important;
+  background-image: none !important;
+  border-color: #b5b8c8 !important;
+}
+/* Collapsed/empty boundlists (Theme combobox picker) should stay hidden,
+   not render as a stray dark strip below the field */
+.x-boundlist[style*="display: none"],
+.x-boundlist-hidden {
+  display: none !important;
+}
+
+/* ==========================================================================
+   41. BUSINESS PROCESS DESIGNER CANVAS – ALWAYS LIGHT
+   The Process Designer tab (#workflowDesigner, define/workflow/workflow.jsf)
+   draws its diagram on a Raphael SVG paper with PNG step sprites and labels
+   authored for a white canvas. Darkening it breaks the diagram, so keep ONLY
+   this panel light while the rest of the page stays dark. Placed last so it
+   beats every generic .x-panel-body dark rule. headerInject.js also shields
+   it from the inline-style cleaner via isProtected().
+   NOTE: workflow-editor.css paints the dashed design grid as a
+   background-image on #workflowDesigner .x-panel-body – it must be KEPT,
+   so the generic "background-image:none" dark rules are re-beaten here.
+   ========================================================================== */
+body.iiq-theme-dark #workflowDesigner,
+body.iiq-theme-dark #workflowDesigner .x-panel-bwrap {
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* White canvas + the stock dashed design grid (same sprite SP uses in light mode) */
+body.iiq-theme-dark #workflowDesigner .x-panel-body {
+  background-color: #ffffff !important;
+  background-image: url("../../../../images/grid.jpg") !important;
+  background-repeat: repeat !important;
+  border-color: var(--iiq-dk-border) !important;
+}
+
+/* Any HTML text inside the designer canvas must be dark on the white surface
+   (SVG step labels use their own fill attributes and are unaffected). */
+body.iiq-theme-dark #workflowDesigner,
+body.iiq-theme-dark #workflowDesigner .x-panel-body {
+  color: #111827 !important;
+}
